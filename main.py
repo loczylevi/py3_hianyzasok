@@ -1,0 +1,16 @@
+#N�v;Oszt�ly;Els� nap;Utols� nap;Mulasztott �r�k
+#Balogh P�ter;6a;1;1;5
+
+class Hianyzasok:
+  def __init__(self,sor):
+    nev,osztaly,elso_nap,utolso_nap,mulasztott = sor.strip().split(";")
+    self.nev = nev
+    self.osztaly = osztaly
+    self.elso_nap = int(elso_nap)
+    self.utolso_nap = int(utolso_nap)
+    self.mulasztott = int(mulasztott)
+
+with open("szeptember.csv","r",encoding="latin2") as f:
+  fejlec = f.readline()
+  lista = [Hianyzasok(sor) for sor in f]
+
