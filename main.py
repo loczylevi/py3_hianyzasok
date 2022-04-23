@@ -40,3 +40,17 @@ if len(kereso) > 0:
 else:
   print("""4.feladat
      A tanuló nem hiányzott szeptemberben""") 
+
+
+#5
+hianyzott_e = [sor for sor in lista if okes_nap == True and sor.elso_nap <= nap <= sor.utolso_nap]
+
+if okes_nap == True:
+  print(f"5.feladat: Hiányzók 2017.09.{nap}.-n:")
+else:
+  print(f"5.feladat: Hiányzók 2017.09. [] --> nem 1 és 30 között volt a bekért szám")
+
+if len(hianyzott_e) > 0:
+  [print(f"     {sor.nev} ({sor.osztaly})") for sor in hianyzott_e]
+else:
+  print("     Nem volt hiányzó!")
