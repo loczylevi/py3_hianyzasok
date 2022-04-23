@@ -18,5 +18,16 @@ with open("szeptember.csv","r",encoding="latin2") as f:
 
 mulasztott_orak = sum([sor.mulasztott for sor in lista])
 
-print(f"""2.feladat:
+print(f"""2.feladat
      Összes mulasztott órák száma: {mulasztott_orak} óra.""")
+
+okes_nap = False
+#3
+nap = int(input("""3.feladat:
+     Kérem adjon meg egy napot: """))
+if 1 <= nap <= 30:
+  okes_nap = True
+else:
+  okes_nap = False
+
+tanulo_nev = input("     Tanuló neve: ")
