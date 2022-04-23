@@ -14,3 +14,9 @@ with open("szeptember.csv","r",encoding="latin2") as f:
   fejlec = f.readline()
   lista = [Hianyzasok(sor) for sor in f]
 
+#2
+
+mulasztott_orak = sum([sor.mulasztott for sor in lista])
+
+print(f"""2.feladat:
+     Összes mulasztott órák száma: {mulasztott_orak} óra.""")
