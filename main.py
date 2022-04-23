@@ -31,3 +31,12 @@ else:
   okes_nap = False
 
 tanulo_nev = input("     Tanuló neve: ")
+
+kereso = [sor for sor in lista if tanulo_nev == sor.nev and 0 < sor.mulasztott]
+
+if len(kereso) > 0:
+  print("""4.feladat
+     A tanuló hiányzott szeptemberben""")
+else:
+  print("""4.feladat
+     A tanuló nem hiányzott szeptemberben""") 
